@@ -39,7 +39,7 @@ CSS.removeClass = function (el, name) {
   if (typeof el.className !== 'undefined') {
     var regex = this.getRegex(name);
     for (i = 0, l = regex.length; i < l; i++) {
-      el.className = el.className.replace(regex[i], '');
+      el.className = el.className.replace(regex[i], ' ');
     }
   } else if (el[0] && el[0].className) {
     for (i = 0, l = el.length; i < l; i++) {
